@@ -24,7 +24,7 @@
         flat
         round
       >
-        <q-avatar size="md" square>
+        <q-avatar size="xl" square>
           <img src="../assets/icons/social-medias.png" />
         </q-avatar>
         <q-menu
