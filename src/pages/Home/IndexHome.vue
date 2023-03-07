@@ -5,8 +5,8 @@
         <span style="font-size: 30px" class="text-bold">Histórico Profissional</span>
       </div>
       <div v-for="i in historico" :key="i" class="q-mt-md flex column text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <p class="text-bold" style="font-size: 2em"> {{ i.empresa }} </p>
-        <p style="font-size: 20px;"> {{ i.funcao }} </p>
+        <span class="text-bold" style="font-size: 2em"> {{ i.empresa }} </span>
+        <span style="font-size: 20px;"> {{ i.funcao }} </span>
       </div>
     </div>
   </q-page>
