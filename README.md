@@ -1,6 +1,6 @@
-# Portfólio - Jadson Pereira (portfolio-jadson)
+# Portfólio - Jadson Pereira
 
-Meu portfólio
+Conheça um pouco do meu trabalho...
 
 ## Install the dependencies
 ```bash

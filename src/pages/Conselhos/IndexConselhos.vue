@@ -1,7 +1,7 @@
 <template>
   <q-page>
-    <div class="flex justify-center items-center bordas_div">
-      <h3 class="text-grey text-center">Precisa de um conselho?</h3>
+    <div class="flex justify-center items-center">
+      <h3 class="text-center">Precisa de um conselho?</h3>
     </div>
 
     <div class="flex justify-center">
@@ -13,7 +13,18 @@
         rounded
         :disable="loading"
       ></q-btn>
-      <div></div>
+
+      <div class="flex items-center q-mt-sm q-ml-sm">
+
+        <q-icon style="color: #F2C037" size="md" name="help_outline">
+          <q-tooltip transition-show="fscale" transition-hide="scale">
+            <span style="font-size: 20px">
+              Esta parte foi desenvolvida a partir do consumo de uma API para dar
+              conselhos, com axios.
+            </span>
+          </q-tooltip>
+        </q-icon>
+      </div>
     </div>
     <div class="flex justify-center items-center text-center q-mt-md q-pa-sm">
       <q-spinner-tail color="white" size="5em" v-if="loading" />
@@ -21,6 +32,7 @@
         {{ conselho }}
       </p>
     </div>
+
   </q-page>
 </template>
 
@@ -43,8 +55,4 @@ async function onRequest() {
 </script>
 
 <style>
-
-.bordas_div {
-  border: 2px solid rgb(255, 255, 255);
-}
 </style>
