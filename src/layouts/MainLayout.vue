@@ -10,7 +10,7 @@
         </router-view>
       </q-page-container>
     </div>
-    <q-footer class="flex justify-center items-center bg-grey">
+    <q-footer class="flex justify-end items-center bg-blue-grey-5">
       <span class="text-body1">Desenvolvido por Jadson Pereira &copy;</span>
       <div class="flex">
         <q-item
@@ -60,6 +60,7 @@
 
 <script setup>
 import HeaderLayout from "./HeaderLayout.vue";
+
 import "animate.css";
 </script>
 
@@ -77,7 +78,6 @@ import "animate.css";
   color: white;
 }
 
-.movearea {
-  transition: 0.3s background-color ease;
-}
+
+
 </style>
