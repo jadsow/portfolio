@@ -1,24 +1,38 @@
 <template>
   <q-page>
-    <p class="text-center" style="font-size: 60px">To Do List</p>
+    <div class="flex justify-center items-center">
+      <p class="text-center" style="font-size: 60px">To Do List</p>
+      <q-icon style="color: #f2c037" class="q-ml-sm" size="md" name="help_outline">
+        <q-tooltip transition-show="fscale" transition-hide="scale">
+          <span style="font-size: 20px">
+            Lista de tarefas desenvolvida com o Pinia, um gerenciador de estados assim como o Vuex.
+          </span>
+        </q-tooltip>
+      </q-icon>
+    </div>
     <q-card style="min-height: 400px; opacity: 40%" class="q-ma-md">
       <div class="row q-col-gutter-md flex justify-center">
         <div class="col-6">
-          <q-input v-model="task" outlined style="font-size: 25px;"/>
+          <q-input v-model="task" outlined dense style="font-size: 25px" />
         </div>
         <div class="flex items-center">
-          <q-btn color="black" label="Adicionar Tarefa" @click="addNewTask" :loading="loading" />
+          <q-btn
+            color="black"
+            label="Adicionar Tarefa"
+            @click="addNewTask"
+            :loading="loading"
+          />
         </div>
 
         <div
-        class="flex justify-center col-12 text-black text-bold"
-        style="font-size: 30px"
+          class="flex justify-center col-12 text-black text-bold"
+          style="font-size: 30px"
         >
-        Lista de tarefas
-      </div>
+          Lista de tarefas
+        </div>
         <div></div>
 
-        <div class="col-12" v-for="task in tasks.tasks" :key="task">
+        <div class="col-12" v-for="(task, i) in tasks.tasks" :key="i">
           <div class="row q-col-gutter-md q-pa-sm">
             <div class="col-7 flex task_p">
               <p class="text-black text-bold" style="font-size: 25px">
@@ -26,7 +40,11 @@
               </p>
             </div>
             <div class="col-5 flex justify-center items-center">
-              <q-btn color="red" label="excluir" />
+              <q-btn
+                color="red"
+                label="excluir"
+                @click="tasks.deleteTask(task.id)"
+              />
             </div>
             <div class="col-12"><q-separator /></div>
           </div>
@@ -41,24 +59,22 @@ import { ref } from "vue";
 import { taskStore } from "src/stores/todo";
 import { useQuasar } from "quasar";
 
-
 const $q = useQuasar();
 const tasks = taskStore();
 const task = ref("");
-const loading = ref(false)
+const loading = ref(false);
 
 function addNewTask() {
   if (task.value.length > 1) {
-    loading.value = true
+    loading.value = true;
     setTimeout(() => {
       tasks.addTask({
         id: Math.floor(Math.random() * 10000),
         title: task.value,
       });
       task.value = "";
-      loading.value = false
-    }, 2000);
-
+      loading.value = false;
+    }, 0);
   } else {
     $q.notify({
       type: "warning",

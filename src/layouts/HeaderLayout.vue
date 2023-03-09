@@ -1,8 +1,11 @@
 <template lang="">
   <q-header class="q-pa-xs bg-black" style="border: 1px solid white">
-    <q-toolbar v-if="$q.screen.gt.sm" class="q-gutter-sm">
+    <q-toolbar v-if="$q.screen.gt.md" class="q-gutter-sm">
       <q-btn rounded color="grey" to="/home">Histórico Profissional</q-btn>
+      <q-btn rounded color="grey" to="/educacional">Histórico Educacional</q-btn>
+      <q-btn rounded color="grey" to="/competencias">Habilidades e Soft Skills</q-btn>
       <q-btn rounded color="grey" to="/conselhos">API Conselhos</q-btn>
+      <q-btn rounded color="grey" to="/filmes">API Filmes</q-btn>
       <q-btn rounded color="grey" to="/todo">ToDo Pinia</q-btn>
       <q-space />
       <q-space />
@@ -22,10 +25,19 @@
         <q-menu class="bg-grey text-white">
           <q-list style="min-width: 100px">
             <q-item clickable to="/home" active-class="menu-link">
-              <q-item-section>Home</q-item-section>
+              <q-item-section>Histórico Profissional</q-item-section>
+            </q-item>
+            <q-item clickable to="/educacional" active-class="menu-link">
+              <q-item-section>Histórico Educacional</q-item-section>
+            </q-item>
+            <q-item clickable to="/competencias" active-class="menu-link">
+              <q-item-section>Habilidades e Soft Skills</q-item-section>
             </q-item>
             <q-item clickable to="/conselhos" active-class="menu-link">
               <q-item-section>Conselhos</q-item-section>
+            </q-item>
+            <q-item clickable to="/filmes" active-class="menu-link">
+              <q-item-section>Filmes</q-item-section>
             </q-item>
             <q-item clickable to="/todo" active-class="menu-link">
               <q-item-section>ToDo Pinia</q-item-section>
@@ -68,15 +80,6 @@ const buttonAnimation = ref(false);
   background: #f2c037;
 }
 
-.menuSocialMediasRotate1 {
-  transform: rotatey(180deg);
-  transition: 0.3s ease-in-out;
-}
-
-.menuSocialMediasRotate2 {
-  transform: rotate(0deg);
-  transition: 0.4s ease-in-out;
-}
 
 .loader {
   position: relative;

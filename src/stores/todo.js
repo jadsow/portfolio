@@ -2,10 +2,7 @@ import { defineStore } from 'pinia';
 
 export const taskStore = defineStore('todo', {
   state: () => ({
-    tasks: [
-      {id: 1, title: "Estudar"},
-      {id: 2, title: "DASDASdasdasdasdasdasdasdasdasdasdasdasdsadsadsadsdsadasdDASDIASJDOIASJDIOASJOIDSAJIODSAJIODSAJOIDJASIODJSAIOJDIOASJDIOASJDIOASJIODSAJIODASJOIDASJOIDAJIODASJIOJ"},
-    ],
+    tasks: [],
   }),
   getters: {
 
@@ -13,6 +10,12 @@ export const taskStore = defineStore('todo', {
   actions: {
     addTask(task) {
       this.tasks.push(task)
+    },
+    deleteTask(id) {
+      console.log(id)
+      this.tasks = this.tasks.filter(t => {
+        return t.id !== id
+      })
     }
   },
 });

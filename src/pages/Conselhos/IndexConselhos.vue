@@ -1,7 +1,9 @@
 <template>
   <q-page>
     <div class="flex justify-center items-center">
-      <h3 class="text-center">Precisa de um conselho?</h3>
+      <p style="font-size: 60px" class="text-center"
+        >Precisa de um conselho?</p
+      >
     </div>
 
     <div class="flex justify-center">
@@ -38,14 +40,14 @@
 
 <script setup>
 import { ref } from "vue";
-import Conselho from "../../api/conselho";
+import apis from "../../api/apis";
 
 const conselho = ref("");
 const loading = ref(false);
 async function onRequest() {
   try {
     loading.value = true;
-    const data = await Conselho.get("advice");
+    const data = await apis.Conselho("advice");
     conselho.value = data;
     loading.value = false;
   } catch (error) {

@@ -10,7 +10,7 @@
         </router-view>
       </q-page-container>
     </div>
-    <q-footer class="flex justify-end items-center bg-blue-grey-5">
+    <q-footer :class="$q.screen.gt.sm? 'flex justify-end items-center bg-blue-grey-5' : 'flex justify-center items-center bg-blue-grey-5'">
       <span class="text-body1">Desenvolvido por Jadson Pereira &copy;</span>
       <div class="flex">
         <q-item
