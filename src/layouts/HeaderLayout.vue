@@ -1,12 +1,12 @@
 <template lang="">
   <q-header class="q-pa-xs bg-black" style="border: 1px solid white">
     <q-toolbar v-if="$q.screen.gt.md" class="q-gutter-sm">
-      <q-btn rounded color="grey" to="/home">Histórico Profissional</q-btn>
-      <q-btn rounded color="grey" to="/educacional">Histórico Educacional</q-btn>
-      <q-btn rounded color="grey" to="/competencias">Habilidades e Soft Skills</q-btn>
-      <q-btn rounded color="grey" to="/conselhos">API Conselhos</q-btn>
-      <q-btn rounded color="grey" to="/filmes">API Filmes</q-btn>
-      <q-btn rounded color="grey" to="/todo">ToDo Pinia</q-btn>
+      <q-btn rounded color="grey-9" to="/home">Histórico Profissional</q-btn>
+      <q-btn rounded color="grey-9" to="/educacional">Histórico Educacional</q-btn>
+      <q-btn rounded color="grey-9" to="/competencias">Habilidades e Soft Skills</q-btn>
+      <q-btn rounded color="grey-9" to="/conselhos">API Conselhos</q-btn>
+      <q-btn rounded color="grey-9" to="/filmes">API Filmes</q-btn>
+      <q-btn rounded color="grey-9" to="/todo">ToDo Pinia</q-btn>
       <q-space />
       <q-space />
       <div class="flex column items-center">
@@ -77,7 +77,7 @@ const buttonAnimation = ref(false);
 <style>
 .menu-link {
   color: white;
-  background: #f2c037;
+  background: #272725;
 }
 
 

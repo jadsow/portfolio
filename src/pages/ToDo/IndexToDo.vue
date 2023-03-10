@@ -10,7 +10,7 @@
         </q-tooltip>
       </q-icon>
     </div>
-    <q-card style="min-height: 400px; opacity: 40%" class="q-ma-md">
+    <q-card style="min-height: 400px; opacity: 60%" class="q-ma-md">
       <div class="row q-col-gutter-md flex justify-center">
         <div class="col-6">
           <q-input v-model="task" outlined dense style="font-size: 25px" />
@@ -77,13 +77,16 @@ function addNewTask() {
     }, 0);
   } else {
     $q.notify({
-      type: "warning",
-      message: "Insira uma tarefa.",
+      color: "negative",
+      message: '<span style="font-size: 20px"> Insira uma tarefa válida </span>',
       timeout: 3000,
       position: "top",
+      progress: true,
+      html: true
     });
   }
 }
+
 </script>
 <style>
 .task_p {

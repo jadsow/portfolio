@@ -106,10 +106,12 @@ function buscarFilme () {
     onRequest()
   } else {
     $q.notify({
-      type: "warning",
-      message: "Insira um filme válido.",
+      color: "negative",
+      message: '<span style="font-size: 20px"> Insira um filme válido </span>',
       timeout: 3000,
       position: "top",
+      progress: true,
+      html: true
     });
   }
 }
