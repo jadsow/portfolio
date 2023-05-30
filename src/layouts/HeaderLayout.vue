@@ -2,8 +2,12 @@
   <q-header class="q-pa-xs bg-black" style="border: 1px solid white">
     <q-toolbar v-if="$q.screen.gt.md" class="q-gutter-sm">
       <q-btn rounded color="grey-9" to="/home">Histórico Profissional</q-btn>
-      <q-btn rounded color="grey-9" to="/educacional">Histórico Educacional</q-btn>
-      <q-btn rounded color="grey-9" to="/competencias">Habilidades e Soft Skills</q-btn>
+      <q-btn rounded color="grey-9" to="/educacional"
+        >Histórico Educacional</q-btn
+      >
+      <q-btn rounded color="grey-9" to="/competencias"
+        >Habilidades e Soft Skills</q-btn
+      >
       <q-btn rounded color="grey-9" to="/conselhos">API Conselhos</q-btn>
       <q-btn rounded color="grey-9" to="/filmes">API Filmes</q-btn>
       <q-btn rounded color="grey-9" to="/todo">ToDo Pinia</q-btn>
@@ -12,12 +16,11 @@
       <div class="flex column items-center">
         <span class="text-caption">Jadson Pereira</span>
         <span class="text-caption">Desenvolvedor Web</span>
-        <div class="loader">
-        </div>
+        <div class="loader"></div>
       </div>
 
       <q-avatar :size="sizeAvatar">
-        <q-img src="img/perfil-jadson-1.png"> </q-img>
+        <q-img src="img/perfil-avatar.png"> </q-img>
       </q-avatar>
     </q-toolbar>
     <q-toolbar v-else>
@@ -48,7 +51,7 @@
       <q-space />
 
       <q-avatar :size="sizeAvatar">
-        <q-img src="img/perfil-jadson-1.png"> </q-img>
+        <q-img src="img/perfil-avatar.png"> </q-img>
       </q-avatar>
     </q-toolbar>
   </q-header>
@@ -64,7 +67,7 @@ const sizeAvatar = computed(() => {
     xs: "48px",
     sm: "48px",
     md: "60px",
-    lg: "90px",
+    lg: "70px",
     xl: "90px",
   };
 
@@ -80,13 +83,12 @@ const buttonAnimation = ref(false);
   background: #272725;
 }
 
-
 .loader {
   position: relative;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: linear-gradient(45deg,transparent,transparent 40%, #e5f403);
+  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
   animation: animate 2s linear infinite;
 }
 
@@ -102,7 +104,7 @@ const buttonAnimation = ref(false);
 }
 
 .loader:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 6px;
   left: 6px;
@@ -114,13 +116,13 @@ const buttonAnimation = ref(false);
 }
 
 .loader:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   left: 0px;
   bottom: 0px;
   right: 0px;
-  background: linear-gradient(45deg,transparent,transparent 40%, #e5f403);
+  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
   border-radius: 50%;
   z-index: 1000;
   z-index: 1;
