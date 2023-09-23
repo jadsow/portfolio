@@ -26,13 +26,13 @@ const habilidades = [
   { habilidade: "Vue.js" },
   { habilidade: "Gerenciamento de estado com Vuex/Pinia" },
   { habilidade: "Desenvolvimento de aplicações com Quasar Framework" },
+  { habilidade: "React.js e Next.js" },
   { habilidade: "Integração com back-end" },
   { habilidade: "Git e Github" },
   { habilidade: "Kanban, Trello e Jira" },
   { habilidade: "Inglês intermediário (Ainda cursando)" },
   { habilidade: "Trabalho em equipe, boa comunicação" },
   { habilidade: "Responsabilidade e assiduidade" },
-  { habilidade: "React.js e Next.js" },
 ];
 </script>
 <style></style>

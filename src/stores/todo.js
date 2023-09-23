@@ -1,21 +1,18 @@
-import { defineStore } from 'pinia';
+import { defineStore } from "pinia";
 
-export const taskStore = defineStore('todo', {
+export const taskStore = defineStore("todo", {
   state: () => ({
     tasks: [],
   }),
-  getters: {
-
-  },
+  getters: {},
   actions: {
     addTask(task) {
-      this.tasks.push(task)
+      this.tasks.push(task);
     },
     deleteTask(id) {
-      console.log(id)
-      this.tasks = this.tasks.filter(t => {
-        return t.id !== id
-      })
-    }
+      this.tasks = this.tasks.filter((t) => {
+        return t.id !== id;
+      });
+    },
   },
 });

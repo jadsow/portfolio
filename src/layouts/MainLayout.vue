@@ -13,8 +13,8 @@
     <q-footer
       :class="
         $q.screen.gt.sm
-          ? 'flex justify-end items-center bg-blue-grey-5'
-          : 'flex justify-center items-center bg-blue-grey-5'
+          ? 'flex justify-end items-center bg-grey-7'
+          : 'flex justify-center items-center bg-grey-7'
       "
     >
       <span class="text-body1">Desenvolvido por Jadson Pereira &copy;</span>
@@ -24,12 +24,12 @@
           @click="openURL('https://wa.me/5548984176989?text=Ol%C3%A1%21')"
         >
           <q-avatar size="sm">
-            <q-img src="../assets/icons/whatsapp.png"></q-img>
+            <q-img src="../assets/icons/whatsapp.png" />
           </q-avatar>
         </q-item>
         <q-item clickable @click="openURL('https://github.com/jadsow')">
           <q-avatar size="sm">
-            <q-img src="../assets/icons/github.png"></q-img>
+            <q-img src="../assets/icons/github.png" />
           </q-avatar>
         </q-item>
         <q-item
@@ -37,7 +37,7 @@
           @click="openURL('https://www.facebook.com/jadson.mariaeduarda')"
         >
           <q-avatar size="sm">
-            <q-img src="../assets/icons/facebook.png"></q-img>
+            <q-img src="../assets/icons/facebook.png" />
           </q-avatar>
         </q-item>
         <q-item
@@ -45,7 +45,7 @@
           @click="openURL('https://www.instagram.com/p.jadsonn/')"
         >
           <q-avatar size="sm">
-            <q-img src="../assets/icons/instagram.png"></q-img>
+            <q-img src="../assets/icons/instagram.png" />
           </q-avatar>
         </q-item>
         <q-item
@@ -55,7 +55,7 @@
           "
         >
           <q-avatar size="sm">
-            <q-img src="../assets/icons/linkedin.png"></q-img>
+            <q-img src="../assets/icons/linkedin.png" />
           </q-avatar>
         </q-item>
       </div>

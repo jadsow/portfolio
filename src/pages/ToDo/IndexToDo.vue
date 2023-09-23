@@ -2,10 +2,16 @@
   <q-page>
     <div class="flex justify-center items-center">
       <p class="text-center" style="font-size: 60px">To Do List</p>
-      <q-icon style="color: #f2c037" class="q-ml-sm" size="md" name="help_outline">
+      <q-icon
+        style="color: #f2c037"
+        class="q-ml-sm"
+        size="md"
+        name="help_outline"
+      >
         <q-tooltip transition-show="fscale" transition-hide="scale">
           <span style="font-size: 20px">
-            Lista de tarefas desenvolvida com o Pinia, um gerenciador de estados assim como o Vuex.
+            Lista de tarefas desenvolvida com o Pinia, um gerenciador de estados
+            assim como o Vuex.
           </span>
         </q-tooltip>
       </q-icon>
@@ -13,7 +19,13 @@
     <q-card style="min-height: 400px; opacity: 60%" class="q-ma-md">
       <div class="row q-col-gutter-md flex justify-center">
         <div class="col-6">
-          <q-input v-model="task" outlined dense style="font-size: 25px" />
+          <q-input
+            v-model="task"
+            outlined
+            dense
+            style="font-size: 25px"
+            @keyup.enter="addNewTask"
+          />
         </div>
         <div class="flex items-center">
           <q-btn
@@ -78,15 +90,15 @@ function addNewTask() {
   } else {
     $q.notify({
       color: "negative",
-      message: '<span style="font-size: 20px"> Insira uma tarefa válida </span>',
+      message:
+        '<span style="font-size: 20px"> Insira uma tarefa válida </span>',
       timeout: 3000,
       position: "top",
       progress: true,
-      html: true
+      html: true,
     });
   }
 }
-
 </script>
 <style>
 .task_p {

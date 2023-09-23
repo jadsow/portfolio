@@ -1,30 +1,21 @@
 <template lang="">
-  <q-header class="q-pa-xs bg-black" style="border: 1px solid white">
+  <q-header class="q-pa-xs bg-grey-6" style="border: 1px solid white">
     <q-toolbar v-if="$q.screen.gt.md" class="q-gutter-sm">
-      <q-btn rounded color="grey-9" to="/home">Histórico Profissional</q-btn>
-      <q-btn rounded color="grey-9" to="/educacional"
-        >Histórico Educacional</q-btn
-      >
-      <q-btn rounded color="grey-9" to="/competencias"
-        >Habilidades e Soft Skills</q-btn
-      >
-      <q-btn rounded color="grey-9" to="/conselhos">API Conselhos</q-btn>
-      <q-btn rounded color="grey-9" to="/filmes">API Filmes</q-btn>
-      <q-btn rounded color="grey-9" to="/todo">ToDo Pinia</q-btn>
+      <q-btn color="grey-9" to="/home">Histórico Profissional</q-btn>
+      <q-btn color="grey-9" to="/educacional">Histórico Educacional</q-btn>
+      <q-btn color="grey-9" to="/competencias">Habilidades e Soft Skills</q-btn>
+      <q-btn color="grey-9" to="/conselhos">API Conselhos</q-btn>
+      <q-btn color="grey-9" to="/filmes">API Filmes</q-btn>
+      <q-btn color="grey-9" to="/todo">ToDo Pinia</q-btn>
       <q-space />
       <q-space />
       <div class="flex column items-center">
         <span class="text-caption">Jadson Pereira</span>
         <span class="text-caption">Desenvolvedor Web</span>
-        <div class="loader"></div>
       </div>
-
-      <q-avatar :size="sizeAvatar">
-        <q-img src="img/perfil-avatar.png"> </q-img>
-      </q-avatar>
     </q-toolbar>
     <q-toolbar v-else>
-      <q-btn icon="menu" rounded>
+      <q-btn icon="menu">
         <q-menu class="bg-grey text-white">
           <q-list style="min-width: 100px">
             <q-item clickable to="/home" active-class="menu-link">
@@ -49,10 +40,10 @@
         </q-menu>
       </q-btn>
       <q-space />
-
-      <q-avatar :size="sizeAvatar">
-        <q-img src="img/perfil-avatar.png"> </q-img>
-      </q-avatar>
+      <div class="flex column items-center">
+        <span class="text-caption">Jadson Pereira</span>
+        <span class="text-caption">Desenvolvedor Web</span>
+      </div>
     </q-toolbar>
   </q-header>
 </template>
@@ -62,70 +53,11 @@ import { computed, ref } from "vue";
 import { useQuasar } from "quasar";
 
 const $q = useQuasar();
-const sizeAvatar = computed(() => {
-  let size = {
-    xs: "48px",
-    sm: "48px",
-    md: "60px",
-    lg: "70px",
-    xl: "90px",
-  };
-
-  return size[$q.screen.name];
-});
-
-const buttonAnimation = ref(false);
 </script>
 
 <style>
 .menu-link {
   color: white;
   background: #272725;
-}
-
-.loader {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
-  animation: animate 2s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    filter: hue-rotate(360deg);
-  }
-}
-
-.loader:before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  bottom: 6px;
-  right: 6px;
-  background: #000;
-  border-radius: 50%;
-  z-index: 1000;
-}
-
-.loader:after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
-  border-radius: 50%;
-  z-index: 1000;
-  z-index: 1;
-  filter: blur(30px);
 }
 </style>
