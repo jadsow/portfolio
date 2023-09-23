@@ -1,9 +1,7 @@
 <template>
   <q-page>
     <div class="flex justify-center items-center">
-      <p style="font-size: 60px" class="text-center"
-        >Precisa de um conselho?</p
-      >
+      <p style="font-size: 60px" class="text-center">Precisa de um conselho?</p>
     </div>
 
     <div class="flex justify-center">
@@ -17,12 +15,11 @@
       ></q-btn>
 
       <div class="flex items-center q-mt-sm q-ml-sm">
-
-        <q-icon style="color: #F2C037" size="md" name="help_outline">
+        <q-icon style="color: #f2c037" size="md" name="help_outline">
           <q-tooltip transition-show="fscale" transition-hide="scale">
             <span style="font-size: 20px">
-              Esta parte foi desenvolvida a partir do consumo de uma API para dar
-              conselhos, com axios.
+              Esta parte foi desenvolvida a partir do consumo de uma API para
+              dar conselhos, com axios.
             </span>
           </q-tooltip>
         </q-icon>
@@ -34,13 +31,12 @@
         {{ conselho }}
       </p>
     </div>
-
   </q-page>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import apis from "../../api/apis";
+import apis from "src/services/apis";
 
 const conselho = ref("");
 const loading = ref(false);
@@ -56,5 +52,4 @@ async function onRequest() {
 }
 </script>
 
-<style>
-</style>
+<style></style>

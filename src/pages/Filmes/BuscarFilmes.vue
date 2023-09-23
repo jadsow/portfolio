@@ -84,7 +84,7 @@
 <script setup>
 import { useQuasar } from "quasar";
 import { ref, computed, watch } from "vue";
-import apis from "../../api/apis";
+import apis from "src/services/apis";
 import { buscarFilmes } from "src/stores/filmes";
 
 const $q = useQuasar();
