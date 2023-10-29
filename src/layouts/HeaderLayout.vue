@@ -1,22 +1,31 @@
-<template lang="">
-  <q-header class="q-pa-xs bg-grey-6" style="border: 1px solid white">
+<template>
+  <q-header :class="colorHeader">
     <q-toolbar v-if="$q.screen.gt.md" class="q-gutter-sm">
-      <q-btn color="grey-9" to="/home">Histórico Profissional</q-btn>
-      <q-btn color="grey-9" to="/educacional">Histórico Educacional</q-btn>
-      <q-btn color="grey-9" to="/competencias">Habilidades e Soft Skills</q-btn>
-      <q-btn color="grey-9" to="/conselhos">API Conselhos</q-btn>
-      <q-btn color="grey-9" to="/filmes">API Filmes</q-btn>
-      <q-btn color="grey-9" to="/todo">ToDo Pinia</q-btn>
-      <q-space />
+      <q-btn :color="buttonsDesktop" to="/home">Histórico Profissional</q-btn>
+      <q-btn :color="buttonsDesktop" to="/educacional"
+        >Histórico Educacional</q-btn
+      >
+      <q-btn :color="buttonsDesktop" to="/competencias"
+        >Habilidades e Soft Skills</q-btn
+      >
+      <q-btn :color="buttonsDesktop" to="/conselhos">API Conselhos</q-btn>
+      <q-btn :color="buttonsDesktop" to="/filmes">API Filmes</q-btn>
+      <q-btn :color="buttonsDesktop" to="/todo">ToDo Pinia</q-btn>
+      <q-btn
+        :color="buttonsDesktop"
+        @click="openURL('https://desafio-frontend-api.vercel.app/#/')"
+      >
+        Integração API Rick and Morty
+      </q-btn>
       <q-space />
       <div class="flex column items-center">
-        <span class="text-caption">Jadson Pereira</span>
-        <span class="text-caption">Desenvolvedor Web</span>
+        <span class="text-caption text-bold">Jadson Pereira</span>
+        <span class="text-caption text-bold">Desenvolvedor Web</span>
       </div>
     </q-toolbar>
     <q-toolbar v-else>
       <q-btn icon="menu">
-        <q-menu class="bg-grey text-white">
+        <q-menu class="bg-grey-10 text-white">
           <q-list style="min-width: 100px">
             <q-item clickable to="/home" active-class="menu-link">
               <q-item-section>Histórico Profissional</q-item-section>
@@ -36,6 +45,13 @@
             <q-item clickable to="/todo" active-class="menu-link">
               <q-item-section>ToDo Pinia</q-item-section>
             </q-item>
+            <q-item
+              clickable
+              @click="openURL('https://desafio-frontend-api.vercel.app/#/')"
+              active-class="menu-link"
+            >
+              <q-item-section>API Rick and Morty</q-item-section>
+            </q-item>
           </q-list>
         </q-menu>
       </q-btn>
@@ -51,8 +67,13 @@
 <script setup>
 import { computed, ref } from "vue";
 import { useQuasar } from "quasar";
+import { openURL } from "quasar";
+import { colorButtons } from "../Composables/index.js";
+import { colorMainLayout } from "../Composables/index.js";
 
 const $q = useQuasar();
+const { buttonsDesktop } = colorButtons();
+const { colorHeader } = colorMainLayout();
 </script>
 
 <style>

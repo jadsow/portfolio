@@ -10,14 +10,10 @@
         </router-view>
       </q-page-container>
     </div>
-    <q-footer
-      :class="
-        $q.screen.gt.sm
-          ? 'flex justify-end items-center bg-grey-7'
-          : 'flex justify-center items-center bg-grey-7'
-      "
-    >
-      <span class="text-body1">Desenvolvido por Jadson Pereira &copy;</span>
+    <q-footer :class="colorFooter">
+      <span class="text-body1"
+        >Desenvolvido por Jadson Pereira - 2023 &copy;</span
+      >
       <div class="flex">
         <q-item
           clickable
@@ -66,15 +62,18 @@
 <script setup>
 import HeaderLayout from "./HeaderLayout.vue";
 import { openURL } from "quasar";
+import { colorMainLayout } from "../Composables/index.js";
 
 import "animate.css";
+
+const { colorFooter } = colorMainLayout();
 </script>
 
 <style>
 .container_login {
   position: relative;
   height: 100%;
-  background: linear-gradient(rgba(45, 55, 72, 0.75), rgba(45, 55, 72, 1)),
+  background: linear-gradient(rgba(45, 55, 72, 0.75), rgb(43, 50, 71)),
     url("assets/background/background-earth.jpg") no-repeat;
   background-size: cover;
 }

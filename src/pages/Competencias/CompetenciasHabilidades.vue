@@ -11,7 +11,7 @@
       <div
         v-for="i in habilidades"
         :key="i"
-        class="q-mt-md flex column text-center col-xs-12 col-sm-12 col-md-12 col-lg-12"
+        class="q-mt-md flex column items-center col-xs-12 col-sm-12 col-md-12 col-lg-12"
       >
         <span class="text-bold" style="font-size: 20px">
           {{ i.habilidade }}
@@ -24,12 +24,13 @@
 const habilidades = [
   { habilidade: "HTML, CSS e Javascript" },
   { habilidade: "Vue.js" },
-  { habilidade: "Gerenciamento de estado com Vuex/Pinia" },
-  { habilidade: "Desenvolvimento de aplicações com Quasar Framework" },
+  { habilidade: "Vuex/Pinia" },
+  { habilidade: "Quasar Framework" },
   { habilidade: "React.js e Next.js" },
-  { habilidade: "Integração com back-end" },
+  { habilidade: "Pipeline CI com Cypress" },
+  { habilidade: "Integração com API's" },
   { habilidade: "Git e Github" },
-  { habilidade: "Kanban, Trello e Jira" },
+  { habilidade: "Kanban, Scrum e Jira" },
   { habilidade: "Inglês intermediário (Ainda cursando)" },
   { habilidade: "Trabalho em equipe, boa comunicação" },
   { habilidade: "Responsabilidade e assiduidade" },

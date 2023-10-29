@@ -49,6 +49,11 @@ const historico = [
     premio: "Prêmio melhor estágio curricular supervisionado (TCC)",
   },
   {
+    instituicao: "UNIVALI - Universidade do Vale do Itajaí",
+    curso: "Análise e Desenvolvimento de Sistemas",
+    premio: "Cursando",
+  },
+  {
     instituicao: "SENAC - Serviço Nacional de Aprendizagem",
     curso: "Técnico em redes de computadores e informática",
   },
