@@ -22,7 +22,7 @@
         </span>
       </div>
 
-      <div class="col-12 flex justify-center q-mt-md">
+      <div class="col-12 flex justify-center q-mt-sm">
         <span
           style="font-size: 30px; text-decoration: underline"
           class="text-bold"
@@ -32,9 +32,9 @@
       <div
         v-for="i in qualificacoes"
         :key="i"
-        class="q-mt-md flex column text-center col-xs-12 col-sm-12 col-md-12 col-lg-12"
+        class="q-mt-xsflex column text-center col-xs-12 col-sm-12 col-md-12 col-lg-12"
       >
-        <span class="text-bold" style="font-size: 20px">
+        <span style="font-size: 20px">
           {{ i.qualificacao }}
         </span>
       </div>
@@ -57,23 +57,26 @@ const historico = [
     instituicao: "SENAC - Serviço Nacional de Aprendizagem",
     curso: "Técnico em redes de computadores e informática",
   },
-  {
-    instituicao: "IFSC - Instituto Federal de Santa Catarina",
-    curso:
-      "Módulo 1 - Sistemas Eletrônicos / Módulos 1 e 2 - Curso técnico em informática",
-  },
 ];
 
 const qualificacoes = [
   { qualificacao: "Curso Vue JS - O guia completo - Udemy" },
   {
     qualificacao:
-      "Qualificação profissional técnica em analista de suporte de redes de computadores para internet",
+      "Next.js e React - Curso Completo - Aprenda com Projetos - Cod3r Cursos Online",
   },
-  { qualificacao: "Certificação Cisco módulo 1" },
+  {
+    qualificacao: "Java: criando a sua primeira aplicação - Alura",
+  },
+  {
+    qualificacao: "Java: aplicando a Orientação a Objetos - Alura",
+  },
   {
     qualificacao:
-      "Next.js e React - Curso Completo - Aprenda com Projetos - Cod3r Cursos Online",
+      "Java: consumindo API, gravando arquivos e lidando com erros - Alura",
+  },
+  {
+    qualificacao: "Testes automatizados com Cypress - básico",
   },
 ];
 </script>
