@@ -12,14 +12,14 @@
     </div>
     <q-footer :class="colorFooter">
       <span class="text-body1"
-        >Desenvolvido por Jadson Pereira - 2023 &copy;</span
+        >Desenvolvido por Jadson Pereira - 2024 &copy;</span
       >
       <div class="flex">
         <q-item
           clickable
           @click="openURL('https://wa.me/5548984176989?text=Ol%C3%A1%21')"
         >
-          <q-avatar size="sm">
+          <q-avatar size="sm" square>
             <q-img src="../assets/icons/whatsapp.png" />
           </q-avatar>
         </q-item>

@@ -22,7 +22,12 @@
 <script setup>
 const historico = [
   {
-    empresa: "Panteu Sistemas - Fev/22 - Atual",
+    empresa: "Ibrowse Consultoria - Nov/23 - Atual",
+    funcao:
+      "Desenvolvedor front-end (Html, CSS, Javascript, Bootstrap, ASP.Net)",
+  },
+  {
+    empresa: "Panteu Sistemas - Fev/22",
     funcao: "Desenvolvedor front-end (Vue.JS e Quasar Framework)",
   },
   {

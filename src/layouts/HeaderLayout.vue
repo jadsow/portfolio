@@ -20,7 +20,7 @@
       <q-space />
       <div class="flex column items-center">
         <span class="text-caption text-bold">Jadson Pereira</span>
-        <span class="text-caption text-bold">Desenvolvedor Web</span>
+        <span class="text-caption text-bold">Desenvolvedor Front-End</span>
       </div>
     </q-toolbar>
     <q-toolbar v-else>
@@ -58,7 +58,7 @@
       <q-space />
       <div class="flex column items-center">
         <span class="text-caption">Jadson Pereira</span>
-        <span class="text-caption">Desenvolvedor Web</span>
+        <span class="text-caption">Desenvolvedor Front-End</span>
       </div>
     </q-toolbar>
   </q-header>

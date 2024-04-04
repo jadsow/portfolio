@@ -1,15 +1,14 @@
 <template>
   <q-page>
-    <p class="text-center" style="font-size: 50px">
-      Navegue pelos menus e conheça um pouco de meu trabalho
-    </p>
-    <p class="text-center" style="font-size: 30px">
-      Portfólio desenvolvido majoritariamente com as seguintes tecnologias:
+    <p class="text-center" style="font-size: 40px">
+      Ferramentas utilizadas para desenvolvimento do portfólio:
     </p>
     <div class="flex justify-center">
       <ul>
-        <li>Vue.js e Quasar Framework;</li>
+        <li>Vue.js;</li>
+        <li>VueRouter para roteamento;</li>
         <li>Pinia como gerenciador de estado;</li>
+        <li>Quasar Framework para estilização</li>
         <li>Axios para consulta de API's;</li>
         <li>
           Utilização dos conceitos de componentização, composables e script
