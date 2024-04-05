@@ -1,5 +1,8 @@
 <template>
   <q-page>
+    <div class="q-pa-xs" v-if="$route.path !== '/'">
+      <q-btn to="/" class="bg-orange">Voltar</q-btn>
+    </div>
     <div class="flex justify-center items-center">
       <p style="font-size: 60px" class="text-center">Pesquise por um filme</p>
 

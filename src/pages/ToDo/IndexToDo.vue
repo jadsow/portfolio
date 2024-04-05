@@ -1,5 +1,8 @@
 <template>
   <q-page>
+    <div class="q-pa-xs" v-if="$route.path !== '/'">
+      <q-btn to="/" class="bg-orange">Voltar</q-btn>
+    </div>
     <div class="flex justify-center items-center">
       <p class="text-center" style="font-size: 60px">To Do List</p>
       <q-icon
