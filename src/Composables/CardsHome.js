@@ -15,7 +15,7 @@ export const cardSize = () => {
     } else if ($q.screen.lg) {
       return "min-height: 450px";
     } else {
-      return ""; // Retorne um valor padrão se nenhum caso for atendido
+      return "min-height: 450px"; // Retorne um valor padrão se nenhum caso for atendido
     }
   });
 
