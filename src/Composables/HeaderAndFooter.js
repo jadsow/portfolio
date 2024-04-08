@@ -6,10 +6,10 @@ export const colorMainLayout = () => {
 
   let colorFooter = computed(() =>
     $q.screen.gt.sm
-      ? "flex justify-end items-center bg-cyan-9"
-      : "flex justify-center items-center bg-cyan-9"
+      ? "flex justify-end items-center"
+      : "flex justify-center items-center"
   );
-  let colorHeader = "q-pa-xs bg-blue-grey-10";
+  let colorHeader = "q-pa-xs bg-light-blue-10";
 
   return {
     colorFooter,

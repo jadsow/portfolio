@@ -194,14 +194,12 @@ const habilidades = [
 }
 
 .cardApresentacao {
-  background-color: #212025;
-  border: 1px solid white;
-  transition: transform 0.3s ease;
+  /* Define o gradiente inicial */
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #181b29);
 }
 
 .cardApresentacao:hover {
-  background-color: #343238;
-  transform: scale(1.01);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.9; /* Opacidade parcial para revelar o gradiente gradualmente */
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0); /* Define uma sombra inicial sem desfoque */
 }
 </style>
