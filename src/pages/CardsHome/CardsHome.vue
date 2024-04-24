@@ -171,15 +171,19 @@ const habilidades = [
   { habilidade: "HTML, CSS e Javascript" },
   { habilidade: "Vue.js" },
   { habilidade: "Vuex/Pinia" },
+  { habilidade: "Node.js" },
+  { habilidade: "Express.js" },
+  { habilidade: "MongoDB" },
+  { habilidade: "Quasar Framework" },
   { habilidade: "Java, Spring e Spring boot 3" },
   { habilidade: "MySQL" },
   { habilidade: "Docker" },
-  { habilidade: "Quasar Framework" },
   { habilidade: "React.js e Next.js" },
   { habilidade: "Pipeline CI com Cypress" },
   { habilidade: "Integração com API's" },
+  { habilidade: "Mobile first" },
   { habilidade: "Git e Github" },
-  { habilidade: "Kanban, Scrum e Jira" },
+  { habilidade: "Atuação com metodologias ágeis" },
 ];
 </script>
 
