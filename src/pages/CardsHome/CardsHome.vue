@@ -1,5 +1,8 @@
 <template>
   <div class="row q-col-gutter-md q-mb-md">
+    <div class="col-12">
+      <ApresentacaoJadson />
+    </div>
     <div class="col-12 text-center q-gutter-sm">
       <q-btn :color="buttonsDesktop" to="/conselhos">API Conselhos</q-btn>
       <q-btn :color="buttonsDesktop" to="/filmes">API Filmes</q-btn>
@@ -77,12 +80,12 @@
       </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4">
-      <div class="q-mx-sm">
+      <div class="q-mx-sm q-mb-md">
         <q-card class="q-pa-sm cardApresentacao" :style="card">
           <div class="row">
             <div class="col-12 flex justify-center">
               <span class="text-h5 text-center q-mb-md"
-                >Habilidades e Soft Skills</span
+                >Habilidades consolidadas</span
               >
             </div>
             <div
@@ -95,6 +98,24 @@
               </span>
             </div>
           </div>
+          <div class="row">
+            <div class="col-12 flex justify-center q-mt-md">
+              <span
+                style="font-size: 17px; text-decoration: underline"
+                class="text-bold"
+                >Conhecimentos</span
+              >
+            </div>
+            <div
+              v-for="i in conhecimentos"
+              :key="i"
+              class="flex column items-center col-xs-12 col-sm-12 col-md-12 col-lg-12"
+            >
+              <span style="font-size: 15px">
+                {{ i.conhecimento }}
+              </span>
+            </div>
+          </div>
         </q-card>
       </div>
     </div>
@@ -104,6 +125,7 @@
 import { useQuasar } from "quasar";
 import { colorButtons, cardSize } from "../../Composables/index";
 import { openURL } from "quasar";
+import ApresentacaoJadson from "../Apresentacao/ApresentacaoJadson.vue";
 
 const $q = useQuasar();
 const { buttonsDesktop } = colorButtons();
@@ -175,15 +197,18 @@ const habilidades = [
   { habilidade: "Express.js" },
   { habilidade: "MongoDB" },
   { habilidade: "Quasar Framework" },
-  { habilidade: "Java, Spring e Spring boot 3" },
-  { habilidade: "MySQL" },
-  { habilidade: "Docker" },
-  { habilidade: "React.js e Next.js" },
   { habilidade: "Pipeline CI com Cypress" },
   { habilidade: "Integração com API's" },
   { habilidade: "Mobile first" },
   { habilidade: "Git e Github" },
   { habilidade: "Atuação com metodologias ágeis" },
+];
+
+const conhecimentos = [
+  { conhecimento: "Java, Spring e Spring boot 3" },
+  { conhecimento: "MySQL" },
+  { conhecimento: "Docker" },
+  { conhecimento: "React.js e Next.js" },
 ];
 </script>
 

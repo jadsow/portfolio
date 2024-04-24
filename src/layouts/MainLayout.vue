@@ -1,5 +1,8 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout
+    view="hHh Lpr fFf"
+    :style="$q.screen.lt.md ? 'overflow: hidden' : 'overflow: hidden'"
+  >
     <div class="bgMainLayout">
       <q-page-container>
         <div id="stars"></div>
@@ -10,7 +13,7 @@
       </q-page-container>
     </div>
     <q-footer :class="colorFooter" style="background-color: #1f2233">
-      <span class="text-body1"
+      <span class="text-body1 q-mt-md"
         >Desenvolvido por Jadson Pereira - 2024 &copy;</span
       >
       <div class="flex">
@@ -59,19 +62,18 @@
 </template>
 
 <script setup>
-import HeaderLayout from "./HeaderLayout.vue";
 import { openURL } from "quasar";
 import { colorMainLayout } from "../Composables/index.js";
-
+import { useQuasar } from "quasar";
 import "animate.css";
 
+const $q = useQuasar();
 const { colorFooter } = colorMainLayout();
 </script>
 
-<style>
+<style scoped>
 * {
   color: white;
-  overflow: hidden;
 }
 
 .bgMainLayout {
