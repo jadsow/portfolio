@@ -167,7 +167,7 @@ const historico = [
     curso: "Técnico em redes de computadores e informática",
   },
   {
-    instituicao: "FIAP",
+    instituicao: "FIAP (Início  Jan/25)",
     curso: "Pós Graduação em Arquitetura de Sistemas .NET",
   },
 ];
