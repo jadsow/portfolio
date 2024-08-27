@@ -166,6 +166,10 @@ const historico = [
     instituicao: "SENAC - Serviço Nacional de Aprendizagem",
     curso: "Técnico em redes de computadores e informática",
   },
+  {
+    instituicao: "FIAP",
+    curso: "Pós Graduação em Arquitetura de Sistemas .NET",
+  },
 ];
 
 const qualificacoes = [
@@ -185,7 +189,14 @@ const qualificacoes = [
       "Java: consumindo API, gravando arquivos e lidando com erros - Alura",
   },
   {
+    qualificacao: "FastAPI - The Complete Course 2024 (Beginner + Advanced)",
+  },
+  {
     qualificacao: "Testes automatizados com Cypress - básico",
+  },
+  {
+    qualificacao:
+      "Curso de ASP .NET Core MVC - Criando um Site do Zero (NET 6)",
   },
 ];
 
@@ -193,9 +204,9 @@ const habilidades = [
   { habilidade: "HTML, CSS e Javascript" },
   { habilidade: "Vue.js" },
   { habilidade: "Vuex/Pinia" },
-  { habilidade: "Node.js" },
-  { habilidade: "Express.js" },
-  { habilidade: "MongoDB" },
+  { habilidade: "ASP .NET Core" },
+  { habilidade: "SQL Server" },
+  { habilidade: "Razor Pages" },
   { habilidade: "Quasar Framework" },
   { habilidade: "Pipeline CI com Cypress" },
   { habilidade: "Integração com API's" },
