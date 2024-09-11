@@ -85,7 +85,7 @@
           <div class="row">
             <div class="col-12 flex justify-center">
               <span class="text-h5 text-center q-mb-md"
-                >Habilidades consolidadas</span
+                >Habilidades Consolidadas</span
               >
             </div>
             <div
@@ -134,7 +134,7 @@ const { card } = cardSize();
 const historicoProfissional = [
   {
     empresa: "Ibrowse Consultoria - Nov/23 - Atual",
-    funcao: "Desenvolvedor Front-end Pleno",
+    funcao: "Desenvolvedor Full-stack Pleno",
   },
   {
     empresa: "Panteu Sistemas - Fev/22",
@@ -167,7 +167,7 @@ const historico = [
     curso: "Técnico em redes de computadores e informática",
   },
   {
-    instituicao: "FIAP (Início  Jan/25)",
+    instituicao: "FIAP - Previsão de conclusão em 2025",
     curso: "Pós Graduação em Arquitetura de Sistemas .NET",
   },
 ];
