@@ -168,7 +168,7 @@ const historico = [
   },
   {
     instituicao: "FIAP - Previsão de conclusão em 2025",
-    curso: "Pós Graduação em Arquitetura de Sistemas .NET",
+    curso: "Pós Graduação em Full Stack Development",
   },
 ];
 
