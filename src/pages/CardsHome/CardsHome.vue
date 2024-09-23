@@ -167,7 +167,7 @@ const historico = [
     curso: "Técnico em redes de computadores e informática",
   },
   {
-    instituicao: "FIAP - Em andamento",
+    instituicao: "FIAP -- Em andamento",
     curso: "Pós Graduação em Full Stack Development",
   },
 ];
