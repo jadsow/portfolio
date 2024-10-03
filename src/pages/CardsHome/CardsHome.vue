@@ -5,7 +5,7 @@
     </div>
     <div class="col-12 text-center q-gutter-sm">
       <q-btn :color="buttonsDesktop" to="/conselhos">API Conselhos</q-btn>
-      <q-btn :color="buttonsDesktop" to="/filmes">API Filmes</q-btn>
+      <!-- <q-btn :color="buttonsDesktop" to="/filmes">API Filmes</q-btn> -->
       <q-btn :color="buttonsDesktop" to="/todo">ToDo Pinia</q-btn>
       <q-btn
         :color="buttonsDesktop"
@@ -63,7 +63,7 @@
               <span
                 style="font-size: 17px; text-decoration: underline"
                 class="text-bold"
-                >Outras Qualificações</span
+                >Cursos Livres</span
               >
             </div>
             <div
@@ -134,11 +134,12 @@ const { card } = cardSize();
 const historicoProfissional = [
   {
     empresa: "Ibrowse Consultoria - Nov/23 - Atual",
-    funcao: "Desenvolvedor Full-stack Pleno",
+    funcao:
+      "Desenvolvedor Full-stack Pleno - C# - .NET Core - Microsoft SQL Server - Bootstrap - jQuery - Javascript",
   },
   {
     empresa: "Panteu Sistemas - Fev/22",
-    funcao: "Desenvolvedor Front-end",
+    funcao: "Desenvolvedor Front-end Pleno - Vue.js - Quasar Framework",
   },
   {
     empresa:
@@ -158,6 +159,10 @@ const historicoProfissional = [
 
 const historico = [
   {
+    instituicao: "FIAP Pós tech - Em andamento",
+    curso: "Arquitetura de Sistemas .NET",
+  },
+  {
     instituicao: "UDESC - Universidade do Estado de Santa Catarina",
     curso: "Bacharel em Administração Pública",
     premio: "Prêmio melhor estágio curricular supervisionado (TCC)",
@@ -166,10 +171,6 @@ const historico = [
     instituicao: "SENAC - Serviço Nacional de Aprendizagem",
     curso: "Técnico em redes de computadores e informática",
   },
-  {
-    instituicao: "FIAP Pós tech - Em andamento",
-    curso: "Arquitetura de Sistemas .NET",
-  },
 ];
 
 const qualificacoes = [
@@ -177,16 +178,6 @@ const qualificacoes = [
   {
     qualificacao:
       "Next.js e React - Curso Completo - Aprenda com Projetos - Cod3r Cursos Online",
-  },
-  {
-    qualificacao: "Java: criando a sua primeira aplicação - Alura",
-  },
-  {
-    qualificacao: "Java: aplicando a Orientação a Objetos - Alura",
-  },
-  {
-    qualificacao:
-      "Java: consumindo API, gravando arquivos e lidando com erros - Alura",
   },
   {
     qualificacao: "FastAPI - The Complete Course 2024 (Beginner + Advanced)",
@@ -206,12 +197,13 @@ const habilidades = [
   { habilidade: "Vuex/Pinia" },
   { habilidade: "Quasar Framework" },
   { habilidade: "Pipeline CI com Cypress" },
-  { habilidade: "ASP .NET Core" },
-  { habilidade: "Razor Pages" },
-  { habilidade: "SQL Server" },
+  { habilidade: "ASP .NET Core MVC" },
+  { habilidade: ".NET Framework" },
+  { habilidade: "C#" },
+  { habilidade: "Microsoft SQL Server" },
   { habilidade: "Mobile first" },
   { habilidade: "Git e Github" },
-  { habilidade: "Atuação com metodologias ágeis" },
+  { habilidade: "Metodologias ágeis" },
 ];
 
 const conhecimentos = [
