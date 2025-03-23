@@ -135,7 +135,7 @@ const historicoProfissional = [
   {
     empresa: "Ibrowse Consultoria - Nov/23 - Atual",
     funcao:
-      "Desenvolvedor Full-stack Pleno - C# - .NET Core - Microsoft SQL Server - Bootstrap - jQuery - Javascript",
+      "Desenvolvedor Full-stack Pleno - C# - .NET Core - Microsoft SQL Server - Bootstrap - jQuery - Javascript - Angular - Angular Material",
   },
   {
     empresa: "Panteu Sistemas - Fev/22",
