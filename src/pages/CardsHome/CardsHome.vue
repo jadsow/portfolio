@@ -16,10 +16,10 @@
       <q-space />
     </div>
   </div>
-  <div class="row q-col-gutter-md">
+  <!-- <div class="row q-col-gutter-md">
     <div class="col-xs-12 col-sm-12 col-md-4">
       <div class="q-mx-sm">
-        <q-card class="q-pa-sm cardApresentacao" :style="card">
+        <q-card class="q-pa-sm cardApresentacao q-mb-md">
           <div class="row">
             <div class="col-12 flex justify-center">
               <span class="text-h5 text-center">Histórico Profissional</span>
@@ -32,7 +32,7 @@
               <span style="font-size: 17px">
                 {{ i.empresa }}
               </span>
-              <span style="font-size: 15px"> {{ i.funcao }} </span>
+              <span style="font-size: 12px"> {{ i.funcao }} </span>
             </div>
           </div>
         </q-card>
@@ -119,7 +119,59 @@
         </q-card>
       </div>
     </div>
+  </div> -->
+<div class="row q-col-gutter-md">
+
+  <div class="col-xs-12 col-md-4">
+    <q-card class="q-pa-md cardApresentacao q-mb-md">
+      <q-card-section class="text-center">
+        <span class="text-h5 text-bold">Histórico Profissional</span>
+      </q-card-section>
+      <q-separator />
+      <q-card-section v-for="(i, index) in historicoProfissional" :key="index" class="text-center">
+        <div class="text-subtitle1">{{ i.empresa }}</div>
+        <div class="text-caption">{{ i.funcao }}</div>
+      </q-card-section>
+    </q-card>
   </div>
+
+
+  <div class="col-xs-12 col-md-4">
+    <q-card class="q-pa-md cardApresentacao q-mb-md" :style="card">
+      <q-card-section class="text-center">
+        <span class="text-h5 text-bold">Histórico Educacional</span>
+      </q-card-section>
+      <q-separator />
+      <q-card-section v-for="(i, index) in historico" :key="index" class="text-center">
+        <div class="text-subtitle1 text-bold">{{ i.instituicao }}</div>
+        <div class="text-body2">{{ i.curso }}</div>
+        <div class="text-italic text-bold text-caption" v-if="i.premio">{{ i.premio }}</div>
+      </q-card-section>
+<!-- 
+      <q-card-section class="text-center q-mt-md">
+        <div class="text-subtitle1 text-bold text-underline">Cursos Livres</div>
+      </q-card-section>
+      <q-card-section v-for="(i, index) in qualificacoes" :key="'qualif-' + index" class="text-center q-pt-xs">
+        <div class="text-body2">{{ i.qualificacao }}</div>
+      </q-card-section> -->
+    </q-card>
+  </div>
+
+  <div class="col-xs-12 col-md-4">
+    <q-card class="q-pa-md cardApresentacao q-mb-md" :style="card">
+      <q-card-section class="text-center">
+        <span class="text-h5 text-bold">Habilidades Consolidadas</span>
+      </q-card-section>
+      <q-separator />
+      <q-card-section v-for="(i, index) in habilidades" :key="'hab-' + index" class="text-center q-pt-xs">
+        <div class="text-body2">{{ i.habilidade }}</div>
+      </q-card-section>
+
+      
+    </q-card>
+  </div>
+</div>
+
 </template>
 <script setup>
 import { useQuasar } from "quasar";
@@ -135,7 +187,7 @@ const historicoProfissional = [
   {
     empresa: "Ibrowse Consultoria - Nov/23 - Atual",
     funcao:
-      "Desenvolvedor Full-stack Pleno - C# - .NET Core - Microsoft SQL Server - Bootstrap - jQuery - Javascript - Angular - Angular Material",
+      "Desenvolvimento de portal institucional utilizando HTML, CSS, JavaScript, jQuery e Bootstrap, com backend em ASP.NET Core; Participação no desenvolvimento de um novo sistema para a Secretaria de Infraestrutura do Estado, utilizando Angular 17, Angular Material, e NgRx para gerenciamento de estado; Criação e manutenção de biblioteca de componentes reutilizáveis para padronização da interface e melhoria da produtividade da equipe; Suporte a desenvolvedores juniores, por meio de revisões de código, orientações técnicas e feedbacks construtivos; Apoio na definição e priorização de tarefas, contribuindo para a organização e entrega dos sprints; Atuação com metodologias ágeis, participando ativamente de cerimônias como daily meetings, planning, review e retrospectiva.",
   },
   {
     empresa: "Panteu Sistemas - Fev/22",
@@ -171,6 +223,14 @@ const historico = [
     instituicao: "SENAC - Serviço Nacional de Aprendizagem",
     curso: "Técnico em redes de computadores e informática",
   },
+  {
+    instituicao: "SENAC - Serviço Nacional de Aprendizagem (Em andamento)",
+    curso: "Graduação em Análise e Desenvolvimento de Sistemas",
+  },
+  {
+    instituicao: "FIAP - Pós Graduação em Full Stack Development - Em Andamento)",
+    curso: "Domain Driven Design, Typescript, Node.JS, Qualidade de Software, UI/UX, React.JS, Next.JS, Microsserviços, Clean Architecture, DevOps e Cloud.",
+  },
 ];
 
 const qualificacoes = [
@@ -192,26 +252,29 @@ const qualificacoes = [
 ];
 
 const habilidades = [
-  { habilidade: "HTML, CSS e Javascript" },
-  { habilidade: "Vue.js" },
-  { habilidade: "Vuex/Pinia" },
+  { habilidade: "HTML, CSS e JavaScript" },
+  { habilidade: "TypeScript" },
+  { habilidade: "Angular (13+) e Angular Material" },
+  { habilidade: "Vue.js (Vuex, Pinia, Vue Router, Vuetify)" },
   { habilidade: "Quasar Framework" },
+  { habilidade: "Node.js e Express.js" },
+  { habilidade: "ASP.NET Core MVC" },
+  { habilidade: ".NET Framework e C#" },
+  { habilidade: "Clean Architecture" },
+  { habilidade: "Gerenciamento de estado (NgRx, Vuex, Pinia)" },
+  { habilidade: "Princípios SOLID" },
+  { habilidade: "Modularização e componentização" },
+  { habilidade: "Separação de responsabilidades e reutilização de código" },
+  { habilidade: "Tailwind CSS" },
+  { habilidade: "Bootstrap" },
+  { habilidade: "MySQL, SQL Server e MongoDB" },
+  { habilidade: "Git (GitHub, Bitbucket, Gitlab)" },
+  { habilidade: "Metodologias ágeis (Scrum: sprints, plannings, dailies, reviews, retrospectivas)" },
+  { habilidade: "Conteinerização" },
   { habilidade: "Pipeline CI com Cypress" },
-  { habilidade: "ASP .NET Core MVC" },
-  { habilidade: ".NET Framework" },
-  { habilidade: "C#" },
-  { habilidade: "Microsoft SQL Server" },
-  { habilidade: "Mobile first" },
-  { habilidade: "Git e Github" },
-  { habilidade: "Metodologias ágeis" },
+  { habilidade: "Mobile First" }
 ];
 
-const conhecimentos = [
-  { conhecimento: "Java, Spring e Spring boot 3" },
-  { conhecimento: "MySQL" },
-  { conhecimento: "Docker" },
-  { conhecimento: "React.js e Next.js" },
-];
 </script>
 
 <style>
@@ -225,12 +288,12 @@ const conhecimentos = [
 }
 
 .cardApresentacao {
-  /* Define o gradiente inicial */
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #181b29);
+  height: auto;
 }
 
 .cardApresentacao:hover {
-  opacity: 0.9; /* Opacidade parcial para revelar o gradiente gradualmente */
-  box-shadow: 0 0 0 rgba(255, 255, 255, 0); /* Define uma sombra inicial sem desfoque */
+  opacity: 0.9; 
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
 }
 </style>
