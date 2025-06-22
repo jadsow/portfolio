@@ -211,10 +211,6 @@ const historicoProfissional = [
 
 const historico = [
   {
-    instituicao: "FIAP Pós tech - Em andamento",
-    curso: "Arquitetura de Sistemas .NET",
-  },
-  {
     instituicao: "UDESC - Universidade do Estado de Santa Catarina",
     curso: "Bacharel em Administração Pública",
     premio: "Prêmio melhor estágio curricular supervisionado (TCC)",
@@ -228,7 +224,7 @@ const historico = [
     curso: "Graduação em Análise e Desenvolvimento de Sistemas",
   },
   {
-    instituicao: "FIAP - Pós Graduação em Full Stack Development - Em Andamento)",
+    instituicao: "FIAP - Pós Graduação em Full Stack Development - (Em Andamento)",
     curso: "Domain Driven Design, Typescript, Node.JS, Qualidade de Software, UI/UX, React.JS, Next.JS, Microsserviços, Clean Architecture, DevOps e Cloud.",
   },
 ];
